@@ -11,7 +11,7 @@ public class Recipe {
     private Long id;
     private String descprtion;
     private Integer prepTime;
-    private Integer cookTİme;
+    private Integer cookTime;
     private Integer servings;
     private String source;
     private String url;
@@ -49,11 +49,11 @@ public class Recipe {
     }
 
     public Integer getCookTİme() {
-        return cookTİme;
+        return cookTime;
     }
 
     public void setCookTİme(Integer cookTİme) {
-        this.cookTİme = cookTİme;
+        this.cookTime = cookTİme;
     }
 
     public Integer getServings() {
