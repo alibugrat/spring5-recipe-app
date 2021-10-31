@@ -16,7 +16,8 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    //private Difficulty difficulty;
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
     @Lob
     private Byte[] image;
     @OneToOne(cascade = CascadeType.ALL)
@@ -48,12 +49,12 @@ public class Recipe {
         this.prepTime = prepTime;
     }
 
-    public Integer getCookTİme() {
+    public Integer getCookTime() {
         return cookTime;
     }
 
-    public void setCookTİme(Integer cookTİme) {
-        this.cookTime = cookTİme;
+    public void setCookTime(Integer cookTime) {
+        this.cookTime = cookTime;
     }
 
     public Integer getServings() {
@@ -110,5 +111,13 @@ public class Recipe {
 
     public void setIngredient(Set<Ingredient> ingredient) {
         this.ingredient = ingredient;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
     }
 }
